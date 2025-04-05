@@ -1,0 +1,180 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.file-selector {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#csv-selector {
+    padding: 8px;
+    min-width: 200px;
+    margin-left: 10px;
+}
+
+#quiz-area {
+    margin-top: 20px;
+}
+
+#question-counter {
+    font-size: 0.9em;
+    color: #666;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#question-card {
+    background-color: #e9e9e9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#question-text {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+#alternatives-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#alternatives-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+#alternatives-list li:hover {
+    background-color: #f0f0f0;
+}
+
+#alternatives-list li.selected {
+    background-color: #d0e0f0; /* Azul claro para selecionado antes de responder */
+    border-color: #a0c0e0;
+}
+
+
+#alternatives-list input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle; /* Alinha melhor o radio button com o texto */
+}
+#alternatives-list label {
+     cursor: pointer; /* Faz o texto ser clicável também */
+     display: inline; /* Garante que o label não quebre linha desnecessariamente*/
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.navigation-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#feedback-area {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#feedback-area p {
+    margin: 5px 0;
+}
+
+#result.correct {
+    color: green;
+    font-weight: bold;
+}
+
+#result.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilos para destacar respostas após responder */
+#alternatives-list li.correct {
+    background-color: #d4edda; /* Verde claro */
+    border-color: #c3e6cb;
+    color: #155724; /* Texto verde escuro */
+}
+#alternatives-list li.correct label::before {
+     content: "✔ "; /* Adiciona checkmark */
+     font-weight: bold;
+}
+
+
+#alternatives-list li.incorrect {
+    background-color: #f8d7da; /* Vermelho claro */
+    border-color: #f5c6cb;
+    color: #721c24; /* Texto vermelho escuro */
+}
+#alternatives-list li.incorrect label::before {
+     content: "✘ "; /* Adiciona X */
+     font-weight: bold;
+}
+
+
+#stats {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+
+#loading-message, #error-message {
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinador de Questões</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Treinador de Questões</h1>
+
+        <div class="file-selector">
+            <label for="csv-selector">Selecione o arquivo de questões:</label>
+            <select id="csv-selector">
+                <option value="">-- Carregando arquivos --</option>
+            </select>
+        </div>
+
+        <div id="quiz-area" style="display: none;">
+            <div id="question-counter"></div>
+            <div id="question-card">
+                <p id="question-text"></p>
+                <ul id="alternatives-list"></ul>
+            </div>
+
+            <button id="submit-answer" disabled>Responder</button>
+
+            <div id="feedback-area" style="display: none;">
+                <p id="result"></p>
+                <p><strong>Justificativa:</strong></p>
+                <p id="justification"></p>
+            </div>
+
+            <div class="navigation-buttons">
+                <button id="prev-question" disabled>Anterior</button>
+                <button id="next-question" disabled>Próxima</button>
+            </div>
+             <p id="stats"></p>
+        </div>
+         <div id="loading-message" style="display: none;">Carregando questões...</div>
+         <div id="error-message" style="display: none; color: red;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
